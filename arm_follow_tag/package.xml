@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>arm_follow_tag</name>
+  <version>0.0.0</version>
+  <description>MoveIt 2 interface for arm control</description>
+  
+  <maintainer email="lingyi.z@outlook.com">usyd</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- 移除所有 Python 依赖 -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  
+  <!-- C++ 依赖 -->
+  <depend>rclcpp</depend>
+  <depend>geometry_msgs</depend>
+  
+  <!-- MoveIt 2 核心依赖 (只保留必要的) -->
+  <depend>moveit_core</depend>
+  <depend>moveit_ros_planning_interface</depend>
+  <depend>moveit_common</depend>
+  <depend>tf2</depend>
+  <depend>tf2_geometry_msgs</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <!-- 移除 ament_python -->
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
